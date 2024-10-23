@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ cryptid['name'] }} - Cryptid Details{% endblock %}
+
+{% block content %}
+<div class="cryptid-detail">
+    <img src="{{ cryptid['image_url'] }}" alt="{{ cryptid['name'] }}">
+    <h2>{{ cryptid['name'] }}</h2>
+    <p>{{ cryptid['description'] }}</p>
+    <a href="/">Back to Cryptids List</a>
+</div>
+{% endblock %}
