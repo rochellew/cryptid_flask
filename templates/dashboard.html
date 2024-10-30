@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Cryptids of the World{% endblock %}
+
+{% block content %}
+<h1>Welcome, {{ username }}!</h1>
+<a href="{{ url_for('logout') }}">Logout</a>
+{% endblock %}

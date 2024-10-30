@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit {{ cryptid.name }}{% endblock %}
+
+{% block content %}
+<h2>Editing {{ cryptid.name }}</h2>
+
+<form method="POST" action="{{ url_for('edit_cryptid', cryptid_id=cryptid['id']) }}">
+    <div>
+        <label for="name">Cryptid Name:</label>
+        <input type="text" id="name" name="name" value="{{ cryptid['name'] }}" required>
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required>{{ cryptid['description'] }}</textarea>
+    </div>
+    <div>
+        <label for="image_url">Image URL:</label>
+        <input type="url" id="image_url" name="image_url" value="{{ cryptid['image_url'] }}" required>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="form-button">Save Changes</button>
+        <a href="{{ url_for('index') }}" class="link-button delete-link">Cancel</a>
+    </div>
+</form>
+{% endblock %}

@@ -3,15 +3,15 @@
 {% block title %}Home - Cryptids of the World{% endblock %}
 
 {% block content %}
+
 <h2>Recently Added Cryptids</h2>
 <div class="cryptid-list">
     {% for cryptid in cryptids %}
-    <a href="/cryptid/{{ cryptid['id'] }}" class="cryptid-card-link">
-        <div class="cryptid-card">
-            <img src="{{ cryptid['image_url'] }}" alt="{{ cryptid['name'] }}">
-            <h2>{{ cryptid['name'] }}</h2>
-        </div>
+    <a href="/cryptid/{{ cryptid['id'] }}" class="cryptid-card">
+        <img src="{{ cryptid['image_url'] }}" alt="{{ cryptid['name'] }}">
+        <h2>{{ cryptid['name'] }}</h2>
     </a>
     {% endfor %}
 </div>
+
 {% endblock %}

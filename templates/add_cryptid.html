@@ -17,15 +17,6 @@
         <label for="image_url">Image URL:</label>
         <input type="url" id="image_url" name="image_url" required>
     </div>
-    <button type="submit">Add Cryptid</button>
+    <button type="submit" class="form-button">Add Cryptid</button>
 </form>
-
-{% if get_flashed_messages() %}
-<div class="flashes">
-    {% for message in get_flashed_messages(with_categories=true) %}
-    <div class="{{ message[0] }}">{{ message[1] }}</div>
-    {% endfor %}
-</div>
-{% endif %}
-
 {% endblock %}
