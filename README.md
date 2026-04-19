@@ -3,7 +3,6 @@
 A Flask frontend for browsing and managing cryptid sightings, backed by a FastAPI service.
 
 ## Requirements
--  Python 3.12+
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - A running instance of the FastAPI backend
 
