@@ -5,7 +5,7 @@
 {% block content %}
 <h2>Editing {{ cryptid.name }}</h2>
 
-<form method="POST" action="{{ url_for('edit_cryptid', cryptid_id=cryptid['id']) }}">
+<form method="POST" action="{{ url_for('cryptids.edit_cryptid', cryptid_id=cryptid['id']) }}">
     <div>
         <label for="name">Cryptid Name:</label>
         <input type="text" id="name" name="name" value="{{ cryptid['name'] }}" required>
@@ -20,7 +20,7 @@
     </div>
     <div class="form-actions">
         <button type="submit" class="form-button">Save Changes</button>
-        <a href="{{ url_for('index') }}" class="link-button delete-link">Cancel</a>
+        <a href="{{ url_for('cryptids.index') }}" class="link-button delete-link">Cancel</a>
     </div>
 </form>
 {% endblock %}

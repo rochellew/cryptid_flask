@@ -15,16 +15,16 @@
                 {% if current_user.is_authenticated %}
                 <div class="user-info">
                     <span>Welcome, {{ current_user.username }}!</span>
-                    <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+                    <a href="{{ url_for('auth.logout') }}" class="logout-button">Logout</a>
                 </div>
                 {% endif %}
 
                 <div class="header-center">
                     <h1>Cryptids of the World</h1>
                     <nav>
-                        <a href="{{ url_for('index') }}">Home</a> |
-                        <a href="{{ url_for('about') }}">About</a> |
-                        <a href="{{ url_for('add_cryptid') }}">Add Cryptid</a>
+                        <a href="{{ url_for('cryptids.index') }}">Home</a> |
+                        <a href="{{ url_for('cryptids.about') }}">About</a> |
+                        <a href="{{ url_for('cryptids.add_cryptid') }}">Add Cryptid</a>
                     </nav>
                 </div>
             </div>
@@ -45,7 +45,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2024 Cryptids of the World</p>
+            <p>&copy; 2026 Cryptids of the World</p>
         </footer>
     </div>
 
